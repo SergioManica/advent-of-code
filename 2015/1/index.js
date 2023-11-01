@@ -19,35 +19,38 @@ function findSanta(data) {
   findPosition(arrayOfSingleString);
 }
 
-// function caracterCounter(arrayOfSingleString){
-//     const upperFloors = []
-//     const lowerFloors = []
-//     arrayOfSingleString.forEach(element => {
-//         if(element === "("){
-//             upperFloors.push(element)
-//         }
-//         if(element === ")"){
-//             lowerFloors.push(element)
-//         }
-//     });
-//     console.log(upperFloors.length);
-//     console.log(lowerFloors.length);
-//     console.log(upperFloors.length - lowerFloors.length);
+// Part 1
 
-// }
+function caracterCounter(arrayOfSingleString) {
+  const upperFloors = [];
+  const lowerFloors = [];
+  arrayOfSingleString.forEach((element) => {
+    if (element === "(") {
+      upperFloors.push(element);
+    }
+    if (element === ")") {
+      lowerFloors.push(element);
+    }
+  });
+  console.log(upperFloors.length);
+  console.log(lowerFloors.length);
+  console.log(upperFloors.length - lowerFloors.length);
+}
+
+// Part 2
 
 function findPosition(arrayOfSingleString) {
   let basement = 0;
-  
-  arrayOfSingleString.forEach((element,index) => {
-      if (element === "(") {
-          basement = basement + 1;
-        }
-        if (element === ")") {
-            basement = basement - 1;
-        }if(basement === -1){
-            console.log(index+1);
-        }
-    });
-    
+
+  arrayOfSingleString.forEach((element, index) => {
+    if (element === "(") {
+      basement = basement + 1;
+    }
+    if (element === ")") {
+      basement = basement - 1;
+    }
+    if (basement === -1) {
+      console.log(index + 1);
+    }
+  });
 }
