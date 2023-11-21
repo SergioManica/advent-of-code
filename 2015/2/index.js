@@ -27,23 +27,22 @@ function calculatePaper(data) {
     width = onlyDimentions[1];
     height = onlyDimentions[2];
 
-    let l = 2 * length * width;
-    let w = 2 * width * height;
-    let h = 2 * height * length;
+    let l = length * width;
+    let w = width * height;
+    let h = height * length;
     let smallestSide;
     let surfaceAreaOfPresents;
+
     if (l <= w && l <= h) {
       smallestSide = l;
-      surfaceAreaOfPresents = l + w + h + smallestSide;
     }
     if (w <= l && w <= h) {
       smallestSide = w;
-      surfaceAreaOfPresents = l + w + h + smallestSide;
     }
     if (h <= l && h <= w) {
       smallestSide = h;
-      surfaceAreaOfPresents = l + w + h + smallestSide;
     }
+    surfaceAreaOfPresents = 2 * (l + w + h) + smallestSide;
     sum += surfaceAreaOfPresents;
   });
   console.log(sum);
