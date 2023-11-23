@@ -66,5 +66,5 @@ function calculateRibbon(inputData) {
     return accumulator + element;
   }, 0);
 
-  console.log(sumOfRibbonSize);
+  // console.log(sumOfRibbonSize);
 }
